@@ -9,12 +9,12 @@ class ContactsController < ApplicationController
 			# save the data
 			@contact.update_spreadsheet
 			# send message
-			flash[:notice] = "message sent from #{@contact.name}."
+			UserMailer.contact_email(@contact).deliver
+			flash[:notice] = "message sent from #{@contact.name}"
 			redirect_to root_path
 		else
 			render :new
 		end
-
 	end
 
 private
