@@ -1,6 +1,7 @@
-<% content_for :title do%>LEarn Rails<% end %>
-<% content_for : description do %>My first Rails App<% end%>
-		end
+<% content_for :title do %>Learn Rails<% end %>
+<% content_for :description do %>My first Rails App<% end %>
+		
+
 <section>
 	<img src="http://lorempixel.com/1170/600/nightlife/1">
 </section>
@@ -15,8 +16,7 @@
 			<%= f.error_notification %>
 			<%= f.input :email, label: false, :placeholder => 'Your email address...' %>
 			<br/>
-			<%= f.button :submit, "Sign up for the newsletter", class ="submit"
-				%>
+			<%= f.button :submit, "Sign up for the newsletter", :class => "submit" %>
 			<% end %>
 		</div>
 	</div>

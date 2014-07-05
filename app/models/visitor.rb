@@ -1,4 +1,4 @@
-class Visitor
+class Visitor < ActiveRecord::Base
 	has_no_table
 	column :email, :string
 	validates_presence_of :email
